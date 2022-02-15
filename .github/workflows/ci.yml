@@ -18,6 +18,7 @@ jobs:
           path: ./file
 
   two:
+   needs: one
    runs-on: ubuntu-latest
    steps:
       - name: Download file
@@ -27,5 +28,4 @@ jobs:
       
       - name: Print file
         run: |
-          ls
-          cat *
+          cat file
