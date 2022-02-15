@@ -23,8 +23,9 @@ jobs:
       - name: Download file
         uses: actions/download-artifact@v2
         with:
-          name: file
+          name: arti
       
       - name: Print file
         run: |
-          cat file
+          ls
+          cat *
